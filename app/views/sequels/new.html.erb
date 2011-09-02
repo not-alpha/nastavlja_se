@@ -1,0 +1,6 @@
+<h1> Nastavljanje </h1>
+
+<%= form_for [@game, @sequel], :html => { :multipart => true } do |form| %>
+  <%= form.file_field :image %>
+  <%= form.submit "Pošalji"%>
+<% end %>

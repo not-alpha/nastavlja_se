@@ -2,7 +2,7 @@ NastavljaSe::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  #match 'games/new' => "games#new"
+  # match 'games/new' => "games#new"
 
   # Sample of regular route:
   # match 'products/:id' => 'catalog#show'
@@ -14,7 +14,9 @@ NastavljaSe::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   
-  resources :games
+  resources :games, :only => [:index, :create, :new, :show] do
+    resources :sequels, :only => [:create, :new]
+  end
 
   # Sample resource route with options:
   #   resources :products do

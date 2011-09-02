@@ -1,5 +1,13 @@
-<h1>Prikaz igre</h1>
+<h1><%= @game.title %></h1>
 
-Ovo je prikaz igre <%= @game.title %>
+Ovdje ide opis igre: <%= @game.description %>
 
+
+<%= link_to "Nastavi!", new_game_sequel_path(@game) %>
+
+<% @game.sequels.each do |sequel| %>
+  <h3> <%= sequel.created_at %> </h3>
+  <%= image_tag sequel.image.url %>
+<% end %>
+    
 
