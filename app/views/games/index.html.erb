@@ -1,0 +1,11 @@
+<h1> Izlistaj svih igara </h1>
+
+<% @games.each do |g| %>
+<p>
+	<%= link_to g.title, game_path(g) %> 
+	<% if g.sequels.count == 0 %>
+		<%= link_to "Delete game", "#" %>
+	<% end %>
+</p>
+	
+<% end %>

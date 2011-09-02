@@ -1,0 +1,25 @@
+<h1> Stvori igru </h1>
+
+<%= form_for @game do |f| %>
+
+<% if @game.errors.any? %>
+  <%= @game.errors %>
+<% end %>
+ 
+<p>
+<%= f.label :title %>
+<%= f.text_field :title %>
+</p>
+
+<p>
+<%= f.label	:description %>
+<%= f.text_area	:description, :size => "30x5" %>
+</p>
+
+<p>
+<%= f.label	:type	%>
+<%= f.select :type_id, [["Tip: linija", 1], ["Tip: unutrag", 2], ["Tip: stablo", 3]] %>
+</p>
+
+<% end %>
+

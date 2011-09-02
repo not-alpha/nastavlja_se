@@ -1,4 +1,4 @@
-class DashboardController < ApplicationController
+class HomeController < ApplicationController
 
   def index
     @current_games = Game.all

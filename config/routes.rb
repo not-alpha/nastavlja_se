@@ -2,6 +2,8 @@ NastavljaSe::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  #match 'games/new' => "games#new"
+
   # Sample of regular route:
   # match 'products/:id' => 'catalog#show'
   # Keep in mind you can assign values other than :controller and :action
@@ -11,7 +13,8 @@ NastavljaSe::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  
+  resources :games
 
   # Sample resource route with options:
   #   resources :products do
@@ -48,7 +51,7 @@ NastavljaSe::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "dashboard#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
